@@ -7,11 +7,11 @@ class Database:
   def startDatabase(self):
     try:
       mydb = mysql.connector.connect(
-          db_host = os.getenv('DB_HOST'),
-          db_user = os.getenv('DB_USER'),
-          db_password = os.getenv('DB_PASSWORD'),
-          db_database = os.getenv('DB_DATABASE'),
-          db_port = os.getenv('DB_PORT')
+          host = os.getenv('DB_HOST'),
+          user = os.getenv('DB_USER'),
+          password = os.getenv('DB_PASSWORD'),
+          database = os.getenv('DB_DATABASE'),
+          port = os.getenv('DB_PORT')
       )
       mycursor = mydb.cursor()
       return (mydb, mycursor)
